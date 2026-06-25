@@ -16,8 +16,8 @@ pipeline {
             steps {
                 withCredentials([usernamePassword(credentialsId: 'docker-devops-id', usernameVariable: 'DOCKER_USERNAME', passwordVariable: 'DOCKER_PASSWORD')]) {
                     sh 'echo $DOCKER_PASSWORD | docker login -u $DOCKER_USERNAME --password-stdin'
-                    sh 'docker tag my-nginx-image $sourabhpj94/my-nginx-image:latest'
-                    sh 'docker push $sourabhpj94/my-nginx-image:latest'
+                    sh 'docker tag my-nginx-image sourabhpj94/my-nginx-image:latest'
+                    sh 'docker push sourabhpj94/my-nginx-image:latest'
                 }
             }
         }
