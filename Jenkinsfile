@@ -16,7 +16,7 @@ pipeline {
             steps {
                 sh 'docker stop my-nginx-container || true'
                 sh 'docker rm my-nginx-container || true'
-                sh 'docker run -d --name my-nginx-container -p 80:8081 my-nginx-image'
+                sh 'docker run -d --name my-nginx-container -p 8081:80 my-nginx-image'
             }
         }
     }
