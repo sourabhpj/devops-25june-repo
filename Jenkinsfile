@@ -1,5 +1,5 @@
 pipeline {
-    aget any 
+    aget any {
 
     stages {
         stage('Checkout') {
